@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="profile">
+                <img src="Screenshot 2024-11-11 154706.png" alt="Profile Picture" class="profile-picture">
+                <h2>Abhishek P</h2>
+            </div>
+            <ul class="menu">
+                <li class="menu-item active" data-target="today-tasks">Today tasks</li>
+                <li class="menu-item" data-target="settings">Settings</li>
+            </ul>
+            <div class="filters">
+                <p>Filters:</p>
+                <ul>
+                    <li><span class="dot personal"></span> Personal</li>
+                    <li><span class="dot freelance"></span> Freelance</li>
+                    <li><span class="dot work"></span> Work</li>
+                </ul>
+            </div>
+        </div>
+        <div class="main-content">
+         <!-- Today Tasks Section -->
+<div class="next-task">
+    <input type="text" id="task-input" placeholder="What is your next task?">
+    <button id="add-task-button">+</button>
+</div>
+<ul class="task-list" id="task-list">
+    <!-- Existing tasks will appear here -->
+</ul>
+
+</div>
+
+
+    <!-- Settings Section -->
+<div class="section" id="settings" style="display: none;">
+    <h1>Settings</h1>
+
+    <!-- Profile Settings -->
+    <h2>Profile Settings</h2>
+    <button>Edit Profile</button>
+    
+    <!-- Change Username -->
+    <h3>Change Username</h3>
+    <input type="text" id="username" placeholder="Enter new username">
+
+    <!-- Change Password -->
+    <h3>Change Password</h3>
+    <input type="password" id="password" placeholder="Enter new password">
+
+    <!-- Theme Options -->
+    <h2>Theme</h2>
+    <label>
+        <input type="radio" name="theme" value="light" checked> Light Theme
+    </label>
+    <label>
+        <input type="radio" name="theme" value="dark"> Dark Theme
+    </label>
+
+    <!-- Notifications -->
+    <h2>Notifications</h2>
+    <label>
+        <input type="checkbox" checked> Enable Email Notifications
+    </label>
+    <label>
+        <input type="checkbox"> Enable Push Notifications
+    </label>
+
+    <!-- Language Settings -->
+    <h2>Language Settings</h2>
+    <select id="language">
+        <option value="en">English</option>
+        <option value="es">Spanish</option>
+        <option value="fr">French</option>
+        <option value="de">German</option>
+    </select>
+
+    <!-- Privacy Settings -->
+    <h2>Privacy Settings</h2>
+    <label>
+        <input type="checkbox" checked> Make Profile Private
+    </label>
+    <label>
+        <input type="checkbox"> Allow Search Engines to Index Profile
+    </label>
+</div>
+
+	    <!-- Edit Profile Section -->
+<div class="section" id="edit-profile" style="display: none;">
+    <h1>Edit Profile</h1>
+    <form id="edit-profile-form">
+        <label>
+            Name:
+            <input type="text" id="edit-name" value="Abhishek P">
+        </label>
+        <label>
+            Profile Picture:
+            <input type="file" id="edit-profile-pic" accept="image/*">
+        </label>
+        <div class="button-group">
+            <button type="button" id="save-profile" class="styled-button">Save</button>
+            <button type="button" id="cancel-edit" class="styled-button">Cancel</button>
+        </div>
+    </form>
+</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
